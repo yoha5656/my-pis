@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Bashwam School</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <a href="#" class="logo">Bashwam School</a>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+            <li><a href="new_student.html">New Student Registration</a></li>
+            <li><a href="former_student.html">Former Student Registration</a></li>
+            <li><a href="employee.html">Employee Registration</a></li>
+        </ul>
+    </header>
+
+    <!-- Hero Section for About Us -->
+    <section class="hero-section">
+        <h1>Welcome to Bashwam School</h1>
+        <p>Shaping Bright Futures, One Student at a Time</p>
+    </section>
+
+    <!-- About Us Content Section -->
+    <section class="about-us">
+        <div class="about-us-container">
+            <h2>About Bashwam School</h2>
+            <p>At Bashwam School, we are committed to providing a holistic education that helps students achieve academic success, personal development, and the skills they need to thrive in the world.</p>
+
+            <div class="about-section">
+                <h3>Our Mission</h3>
+                <p>Our mission is to deliver high-quality education that empowers students to succeed academically and socially, preparing them for leadership roles in the community and the world.</p>
+            </div>
+
+            <div class="about-section">
+                <h3>Our Vision</h3>
+                <p>We aim to be a place where students feel valued, supported, and motivated to be their best selves, while fostering lifelong learning and a sense of responsibility towards their community.</p>
+            </div>
+
+            <div class="about-section">
+                <h3>Why Choose Bashwam School?</h3>
+                <ul>
+                    <li>Qualified and passionate teachers dedicated to student success.</li>
+                    <li>Modern classrooms equipped with the latest learning tools.</li>
+                    <li>A nurturing environment that encourages creativity and critical thinking.</li>
+                    <li>A strong academic curriculum with a focus on holistic development.</li>
+                    <li>A variety of extracurricular activities to support the development of well-rounded students.</li>
+                </ul>
+            </div>
+
+            <div class="about-section">
+                <h3>Join Our Community</h3>
+                <p>Be part of an institution that values excellence and encourages students to become lifelong learners and leaders of tomorrow. Together, we can achieve great things!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Bashwam School. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+<style> 
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #58b4e7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+
+#header .logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+#header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  border-radius: 20px;
+}
+
+#header ul li {
+  list-style: none;
+}
+
+#header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+  transition: all 0.4s ease-in-out;
+}
+
+#header ul li a:hover,
+#header ul li a.active {
+  background: #112434;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url('https://your-image-path.com/school-image.jpg'); /* Replace with actual image URL */
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.hero-section h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.5em;
+}
+
+/* About Us Content Section */
+.about-us {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 50px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-container {
+  text-align: center;
+}
+
+.about-us h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.about-us p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.about-section {
+  margin-bottom: 40px;
+}
+
+.about-section h3 {
+  font-size: 2em;
+  color: #112434;
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.about-section ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.about-section ul li {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #112434;
+  color: white;
+  font-size: 1em;
+}
+</style>
+<script>
+  // 1. Smooth Scrolling for Internal Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// 2. Show More Content in About Us Section (Dynamic Content)
+const showMoreButton = document.querySelector('#show-more-btn');
+const hiddenContent = document.querySelector('#hidden-content');
+
+if (showMoreButton && hiddenContent) {
+    showMoreButton.addEventListener('click', function () {
+        // Toggle the visibility of additional content
+        hiddenContent.classList.toggle('show');
+        
+        // Change button text based on visibility
+        if (hiddenContent.classList.contains('show')) {
+            showMoreButton.textContent = "Show Less";
+        } else {
+            showMoreButton.textContent = "Show More";
+        }
+    });
+}
+
+// 3. Animations for About Us Section (when section is scrolled into view)
+const animateOnScroll = () => {
+    const sections = document.querySelectorAll('.about-section');
+    
+    sections.forEach(section => {
+        const sectionPosition = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionPosition < windowHeight - 100) {
+            section.classList.add('animate');
+        }
+    });
+};
+
+// Listen for the scroll event
+window.addEventListener('scroll', animateOnScroll);
+
+// Initial animation for content that's already visible
+animateOnScroll();
+
+</script>
+</body>
+
+
+</html>

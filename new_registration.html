@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Student Registration - Bashwam School</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header id="header">
+        <a href="#" class="logo">Bashwam School</a>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="new_student_registration.html" class="active">New Student Registration</a></li>
+            <li><a href="former_registration.html">Former Student Registration</a></li>
+            <li><a href="employee.html">Employee Registration</a></li>
+        </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>New Student Registration</h1>
+        <p>Welcome to Bashwam School. Please fill out the form below to register as a new student.</p>
+    </section>
+
+    <!-- New Student Registration Form -->
+    <div class="register">
+        <h2>New Student Registration Form</h2>
+        <p>Please fill out this form to register as a new student.</p>
+
+        <form action="/submit_registration" method="POST" class="form-box">
+            <div class="input-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="input-group">
+                <label for="date-of-birth">Date of Birth</label>
+                <input type="date" id="date-of-birth" name="date-of-birth" required>
+            </div>
+
+            <div class="input-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="grade">Grade to Enter</label>
+                <select id="grade" name="grade" required>
+                    <option value="1">Grade 1</option>
+                    <option value="2">Grade 2</option>
+                    <option value="3">Grade 3</option>
+                    <option value="4">Grade 4</option>
+                    <option value="1">Grade 6</option>
+                    <option value="2">Grade 7</option>
+                    <option value="3">Grade 8</option>
+                    <option value="4">Grade 9</option>
+                    <option value="5">Grade 10</option>
+                    <option value="1">Grade 11</option>
+                    <option value="1">Grade 12</option>
+                    <!-- Add more grades as needed -->
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="parent-name">Parent/Guardian Name</label>
+                <input type="text" id="parent-name" name="parent-name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+
+            <button type="submit" class="register-button">Register</button>
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Bashwam School. All Rights Reserved.</p>
+    </footer>
+  <script src="script.js"></script>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #58b4e7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+
+#header .logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+#header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  border-radius: 20px;
+}
+
+#header ul li {
+  list-style: none;
+}
+
+#header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+  transition: all 0.4s ease-in-out;
+}
+
+#header ul li a:hover,
+#header ul li a.active {
+  background: #112434;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.hero-section h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.2em;
+}
+
+/* New Student Registration Form */
+.register {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #bedbe5;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.register h2 {
+  font-size: 2.5em;
+  color: #112434;
+  margin-bottom: 20px;
+}
+
+.register p {
+  font-size: 1em;
+  color: #112434;
+  margin-bottom: 20px;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 1em;
+  color: #112434;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+  padding: 10px;
+  border: 1px solid #112434;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #333;
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: #58b4e7;
+  box-shadow: 0 0 5px rgba(88, 180, 231, 0.5);
+}
+
+.register-button {
+  padding: 12px 20px;
+  background: #58b4e7;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.register-button:hover {
+  background: #112434;
+}
+
+/* Footer Section */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer p {
+  font-size: 1em;
+}
+/* Success Message Styling */
+.success-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #58b4e7;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10000;
+}
+
+.success-message p {
+    margin: 0;
+    text-align: center;
+}
+</style>
+<script>
+    // Form Validation
+function validateStudentForm(form) {
+    let isValid = true;
+    const inputs = form.querySelectorAll('input, textarea, select');
+    
+    inputs.forEach(input => {
+        // Check for required fields
+        if (input.required && !input.value.trim()) {
+            isValid = false;
+            input.classList.add('error');
+            input.nextElementSibling.textContent = `${input.previousElementSibling.textContent} is required.`;
+        } else {
+            input.classList.remove('error');
+            input.nextElementSibling.textContent = '';
+        }
+    });
+
+    return isValid;
+}
+
+// Handle Form Submission
+document.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        if (validateStudentForm(form)) {
+            // If form is valid, submit it (for now, log a success message to the console)
+            console.log("Form Submitted Successfully!");
+            // Optionally, you can submit the form data here (via AJAX or direct submission).
+            // form.submit();  // Uncomment this to submit the form.
+            showSuccessMessage();
+        } else {
+            console.log("Please fill in all required fields.");
+        }
+    });
+});
+
+// Success Message Display
+function showSuccessMessage() {
+    const successMessage = document.createElement('div');
+    successMessage.classList.add('success-message');
+    successMessage.innerHTML = `
+        <p>Thank you for registering! Our team will get back to you soon.</p>
+    `;
+    document.body.appendChild(successMessage);
+
+    // Auto-remove success message after 5 seconds
+    setTimeout(() => {
+        successMessage.remove();
+    }, 5000);
+}
+
+// Handle Dynamic Content for Additional Options
+const courseSelect = document.querySelector('#course');
+const additionalDetailsContainer = document.querySelector('#additional-details');
+
+courseSelect.addEventListener('change', function () {
+    if (this.value === 'advanced') {
+        additionalDetailsContainer.style.display = 'block'; // Show additional input fields for advanced students
+    } else {
+        additionalDetailsContainer.style.display = 'none'; // Hide additional input fields for regular students
+    }
+});
+
+// Auto-Set Current Date for Birthdate (or any other date field)
+const today = new Date();
+const dateInput = document.querySelector('#birthdate');
+if (dateInput) {
+    const formattedDate = today.toISOString().split('T')[0];
+    dateInput.setAttribute('max', formattedDate);  // Prevent user from selecting a future date
+}
+
+// Example of checking if the user is logged in (for personalized welcome)
+document.addEventListener("DOMContentLoaded", function() {
+    const welcomeMessage = document.querySelector('.hero-section p');
+    const userLoggedIn = false; // Placeholder for actual login check
+
+    if (userLoggedIn) {
+        welcomeMessage.textContent = "Welcome back! Ready to join us again?";
+    }
+});
+
+// Function to toggle the "active" class for the nav links
+const navLinks = document.querySelectorAll('#header ul li a');
+navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+        navLinks.forEach(link => link.classList.remove('active'));
+        this.classList.add('active');
+    });
+});
+
+</script>
+</body>
+
+</html>

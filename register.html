@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration - Bashwam School</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Header Section (same as employee.html) -->
+<header id="header">
+    <a href="#" class="logo">Bashwam School</a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="new_student.html">New Student Registration</a></li>
+            <li><a href="former_student.html">Former Student Registration</a></li>
+            <li><a href="employee.html" class="active">Employee Registration</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <h1>Student Registration</h1>
+    <p>Welcome to Bashwam School's registration portal. Please select the type of registration below.</p>
+</section>
+
+<!-- Registration Selection Section -->
+<div class="register">
+    <!-- New Student Registration Section -->
+    <div class="register-box">
+        <h3>New Student Registration</h3>
+        <p>Are you a new student? Click the button below to begin your registration.</p>
+        <a href="new_registration.html" class="register-button">Go to New Student Registration</a>
+    </div>
+
+    <!-- Former Student Registration Section -->
+    <div class="register-box">
+        <h3>Former Student Registration</h3>
+        <p>If you're a former student, click below to access your registration form.</p>
+        <a href="former_registration.html" class="register-button">Go to Former Student Registration</a>
+    </div>
+</div>
+<style>
+  
+  /* Header Styling (same as employee.html) */
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #58b4e7;
+    color: #fff;
+    z-index: 10000;
+}
+
+#header .logo {
+    font-weight: 700;
+    font-size: 1.8em;
+    color: #fff;
+    text-decoration: none;
+}
+
+#header nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+#header nav ul li {
+    list-style: none;
+}
+
+#header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+#header nav ul li a:hover,
+#header nav ul li a.active {
+    background: #58b4e7;
+}
+
+/* Responsive Header Styling */
+@media (max-width: 800px) {
+    #header {
+        padding: 15px 40px;
+    }
+    #header nav ul {
+        gap: 15px;
+    }
+}
+
+/* Main Content Styles */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #bedbe5;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.register {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.register-box {
+    width: 45%;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.register-box:hover {
+    transform: scale(1.05);
+}
+
+.register-box h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.register-box p {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.register-button {
+    padding: 10px 20px;
+    background: #58b4e7;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.register-button:hover {
+    background: #333;
+}
+
+</style>
+
+</body>
+</html>

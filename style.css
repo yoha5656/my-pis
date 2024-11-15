@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #58b4e7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+#header #menu {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  #header {
+    align-items: flex-start;
+  }
+  #header #menu {
+    display: inline-block;
+  }
+}
+#header .logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+#header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  border-radius: 20px;
+}
+#header ul li {
+  list-style: none;
+}
+#header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+  transition: all 0.4s ease-in-out;
+}
+#header ul li a:hover, #header ul li a.active {
+  background: #112434;
+}
+@media (max-width: 800px) {
+  #header ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5em;
+    width: 80%;
+    margin: auto;
+    background-color: #ccc;
+    border-radius: 20px;
+  }
+  #header ul li {
+    width: 100%;
+  }
+  #header ul li a:not(.active) {
+    color: #112434;
+  }
+  #header ul li a {
+    display: block;
+    padding: 6px 15px;
+  }
+  #header ul li a:hover, #header ul li a.active {
+    color: #fff;
+  }
+}
+
+
+section {
+  padding: 50px;
+  text-align: center;
+  color: #fff;
+}
+
+section img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+section img#house {
+  z-index: 2;
+}
+section img#crs {
+  transform: scale(0.75);
+  top: 0;
+  bottom: 95%;
+  left: 14%;
+  margin: auto 0 auto;
+}
+section #txt {
+  position: absolute;
+  left: -150px;
+  color: #fff;
+  z-index: 1;
+  font-size: 8em;
+  font-weight: 900;
+  white-space: nowrap;
+  text-transform: uppercase;
+  -webkit-text-stroke: 4px #112434;
+}
+@media (max-width: 767px) {
+  section #txt {
+    font-size: 6em;
+  }
+}
+@media (max-width: 400px) {
+  section #txt {
+    font-size: 4em;
+  }
+}
+
+.register {
+  position: relative;
+  padding: 100px;
+  background: #bedbe5;
+  box-shadow: 0 0 0 2px #bedbe5;
+}
+.register h2 {
+  font-size: 3em;
+  color: #112434;
+  margin-bottom: 10px;
+}
+.register p {
+  font-size: 1em;
+  color: #112434;
+  margin-bottom: 1em;
+}
+
+.register-box {
+    display: inline-block; /* Align boxes side by side */
+    width: 30%; /* Width of each service box */
+    margin: 15px; /* Space around each box */
+    border: 1px solid var(--box-border-color) ; /* Thin black border */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* To prevent overflow of images */
+    background-color: var(--box-color); /* White background for each box */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease,background-color 0.3s ease, border-color 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+.register-box:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+.register-image {
+    width: 100%; /* Full width of the box */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Cover the area without distortion */
+    border-bottom: 1px solid #000; /* Optional: border below the image */
+}
+
+.register-box h3 {
+    font-size: 24px; /* Font size for service title */
+    margin: 10px 0; /* Margin around the title */
+    color: var(--text-color); /* Text color based on theme */
+}
+
+.register-box p {
+    font-size: 16px; /* Font size for description */
+    padding: 0 10px 20px; /* Padding for description */
+    color: var(--text-color); /* Text color based on theme */
+}
+.register h2 {
+  font-size: 36px; /* Bigger font for the section heading */
+  margin-bottom: 20px; /* Space below the heading */
+}
+.hero-section {
+  background-image: url('https://upgradedpoints.com/wp-content/uploads/2023/03/Evermore-Resort-Orlando-1.jpeg'); /* Background image for first section */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent image repeat */
+  padding: 50px 20px; /* Add padding */
+  text-align: center; /* Center text */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+.welcome-heading {
+  text-align: center;          /* Centers the heading */
+  font-size: 2.5em;            /* Adjust size as needed */
+  margin-top: 20px;            /* Adds space above */
+  margin-bottom: 20px;         /* Adds space below */
+  color: #fff;                 /* Customize the color */
+  font-weight: bold;           /* Makes the text bold */
+}
+
+/* For mobile responsiveness */
+@media (max-width: 600px) {
+  .welcome-heading {
+      font-size: 1.8em;        /* Slightly smaller font size on smaller screens */
+  }
+}
+/* Button Styles */
+.btn-primary {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #58b4e7;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: #112434;
+  transform: translateY(-3px); /* Hover effect */
+}
+
+.btn-primary:active {
+  transform: translateY(1px); /* Click effect */
+}
+
+/* Section Styling */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+section h1, section h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+/* Basic Styles for the Main Page */
+.main-page {
+  position: top;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden; /* Hide content overflowing from the animated background */
+  text-align: center;
+}
+
+.content {
+  z-index: 2; /* Content appears on top of the background */
+  font-size: 2.5em;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 4em;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  background-color: #112434;
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #334d69;
+}
+
+/* Background Animation */
+.background-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('your-graphic-art-image.png') no-repeat center center;
+  background-size: cover;
+  animation: movingBackground 15s linear infinite;
+  opacity: 0.3;
+}
+
+/* Creating an Abstract Animated Background (using shapes or gradients) */
+@keyframes movingBackground {
+  0% {
+      transform: translateX(0) rotate(0deg);
+  }
+  50% {
+      transform: translateX(100%) rotate(45deg);
+  }
+  100% {
+      transform: translateX(0) rotate(0deg);
+  }
+}
+
+
+/* Particles Container */
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;  /* Ensure it stays in the background */
+}

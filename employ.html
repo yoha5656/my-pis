@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration - Bashwam School</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header id="header">
+    <a href="#" class="logo">Bashwam School</a>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="new_registration.html">New Student Registration</a></li>
+        <li><a href="former_registration.html">Former Student Registration</a></li>
+        <li><a href="employee.html" class="active">Employee Registration</a></li>
+    </ul>
+</div>
+</header>
+<section class="hero-section">
+    <h1>Teacher Registration</h1>
+    <p>Join our dedicated teaching team and make an impact at Bashwam School.</p>
+</section>
+
+<div class="register">
+    <h2>Employee Registration Form</h2>
+    <p>Please fill out this form to apply as a teacher.</p>
+
+    <form action="/submit_employee" method="POST" class="form-box">
+        <div class="input-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="input-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="input-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        
+        <div class="input-group">
+            <label for="subject">Subject Specialization</label>
+            <input type="text" id="subject" name="subject" required>
+        </div>
+
+        <div class="input-group">
+            <label for="experience">Years of Teaching Experience</label>
+            <input type="number" id="experience" name="experience" min="0" required>
+        </div>
+        
+        <div class="input-group">
+            <label for="qualifications">Qualifications</label>
+            <textarea id="qualifications" name="qualifications" rows="4" required></textarea>
+        </div>
+
+        <button type="submit" class="register-button">Submit Application</button>
+    </form>
+</div>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #58b4e7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+
+#header .logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+#header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  border-radius: 20px;
+}
+
+#header ul li {
+  list-style: none;
+}
+
+#header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+  transition: all 0.4s ease-in-out;
+}
+
+#header ul li a:hover,
+#header ul li a.active {
+  background: #112434;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.hero-section h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.2em;
+}
+
+.register {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #bedbe5;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.register h2 {
+  font-size: 2.5em;
+  color: #112434;
+  margin-bottom: 20px;
+}
+
+.register p {
+  font-size: 1em;
+  color: #112434;
+  margin-bottom: 20px;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 1em;
+  color: #112434;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group textarea {
+  padding: 10px;
+  border: 1px solid #112434;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #333;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: #58b4e7;
+  box-shadow: 0 0 5px rgba(88, 180, 231, 0.5);
+}
+
+.register-button {
+  padding: 12px 20px;
+  background: #58b4e7;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.register-button:hover {
+  background: #112434;
+}
+
+</style>
+<script>
+    // Validate the Former Employee Registration Form
+function validateFormerEmployeeForm(form) {
+    let isValid = true;
+    const inputs = form.querySelectorAll('input, textarea');
+    
+    inputs.forEach(input => {
+        if (input.required && !input.value.trim()) {
+            isValid = false;
+            input.classList.add('error');
+            input.nextElementSibling.textContent = `${input.previousElementSibling.textContent} is required.`;
+        } else {
+            input.classList.remove('error');
+            input.nextElementSibling.textContent = '';
+        }
+    });
+
+    return isValid;
+}
+
+// Event listener for form submission
+document.querySelectorAll('#former-employee-form').forEach(form => {
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent actual form submission
+        if (validateFormerEmployeeForm(form)) {
+            // Simulate form submission (this can be replaced with actual backend submission logic)
+            alert("Form submitted successfully!");
+            form.reset(); // Reset the form after successful submission
+        } else {
+            alert("Please fill in all required fields.");
+        }
+    });
+});
+
+// Optional: Clear error messages and styling when user interacts with the fields
+document.querySelectorAll('input, textarea').forEach(input => {
+    input.addEventListener('focus', function() {
+        if (input.classList.contains('error')) {
+            input.classList.remove('error');
+            input.nextElementSibling.textContent = '';
+        }
+    });
+});
+
+// Optional: Automatically fill some fields if needed (e.g., auto-fill former job title, etc.)
+// Example: If the user is a specific former employee, pre-fill some fields
+document.addEventListener("DOMContentLoaded", function() {
+    const formerEmployeeData = getFormerEmployeeData(); // Example: function to fetch data
+    if (formerEmployeeData) {
+        document.querySelector('#name').value = formerEmployeeData.name;
+        document.querySelector('#email').value = formerEmployeeData.email;
+        document.querySelector('#job-title').value = formerEmployeeData.jobTitle;
+    }
+});
+
+// Example function to simulate fetching former employee data (could be replaced with API calls)
+function getFormerEmployeeData() {
+    // Placeholder data: Replace with actual data fetching logic (API, localStorage, etc.)
+    return {
+        name: "John Doe",
+        email: "john.doe@example.com",
+        jobTitle: "Math Teacher"
+    };
+}
+
+// Example: Dynamic Year in Footer (if you need this for any page)
+const yearElement = document.querySelector('footer p');
+const currentYear = new Date().getFullYear();
+yearElement.textContent = `&copy; ${currentYear} Bashwam School. All Rights Reserved.`;
+
+</script>
+</body>
+</html>

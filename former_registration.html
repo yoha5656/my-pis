@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Former Student Registration - Bashwam School</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header id="header">
+        <a href="#" class="logo">Bashwam School</a>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="new_registration.html">New Student Registration</a></li>
+            <li><a href="former_registration.html" class="active">Former Student Registration</a></li>
+            <li><a href="employee.html">Employee Registration</a></li>
+        </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Former Student Registration</h1>
+        <p>If you were previously enrolled at Bashwam School, please use the form below to re-register.</p>
+    </section>
+
+    <!-- Former Student Registration Form -->
+    <div class="register">
+        <h2>Former Student Registration Form</h2>
+        <p>Please fill out this form to re-register as a former student.</p>
+
+        <form action="/submit_former_student_registration" method="POST" class="form-box">
+            <div class="input-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="input-group">
+                <label for="date-of-birth">Date of Birth</label>
+                <input type="date" id="date-of-birth" name="date-of-birth" required>
+            </div>
+
+            <div class="input-group">
+                <label for="previous-grade">Previous Grade</label>
+                <select id="previous-grade" name="previous-grade" required>
+                    <option value="1">Grade 1</option>
+                    <option value="2">Grade 2</option>
+                    <option value="3">Grade 3</option>
+                    <option value="4">Grade 4</option>
+                    <option value="5">Grade 5</option>
+                    <option value="6">Grade 6</option>
+                    <option value="7">Grade 7</option>
+                    <option value="8">Grade 8</option>
+                    <option value="9">Grade 9</option>
+                    <option value="10">Grade 10</option>
+                    <option value="11">Grade 11</option>
+                    <option value="12">Grade 12</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="promoted-to">Promoted To</label>
+                <select id="promoted-to" name="promoted-to" required>
+                    <option value="1">Grade 1</option>
+                    <option value="2">Grade 2</option>
+                    <option value="3">Grade 3</option>
+                    <option value="4">Grade 4</option>
+                    <option value="5">Grade 5</option>
+                    <option value="6">Grade 6</option>
+                    <option value="7">Grade 7</option>
+                    <option value="8">Grade 8</option>
+                    <option value="9">Grade 9</option>
+                    <option value="10">Grade 10</option>
+                    <option value="11">Grade 11</option>
+                    <option value="12">Grade 12</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="reason-for-leaving">Reason for Leaving</label>
+                <textarea id="reason-for-leaving" name="reason-for-leaving" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="register-button">Re-register</button>
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Bashwam School. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #58b4e7;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        #header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10000;
+        }
+
+        #header .logo {
+            color: #fff;
+            font-weight: 700;
+            font-size: 2em;
+            text-decoration: none;
+        }
+
+        #header ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            border-radius: 20px;
+        }
+
+        #header ul li {
+            list-style: none;
+        }
+
+        #header ul li a {
+            text-decoration: none;
+            padding: 6px 15px;
+            color: #fff;
+            border-radius: 20px;
+            transition: all 0.4s ease-in-out;
+        }
+
+        #header ul li a:hover,
+        #header ul li a.active {
+            background: #112434;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            text-align: center;
+            padding: 50px 20px;
+            border-radius: 10px;
+            margin-top: 100px;
+        }
+
+        .hero-section h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .hero-section p {
+            font-size: 1.2em;
+        }
+
+        /* Former Student Registration Form */
+        .register {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background: #bedbe5;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .register h2 {
+            font-size: 2.5em;
+            color: #112434;
+            margin-bottom: 20px;
+        }
+
+        .register p {
+            font-size: 1em;
+            color: #112434;
+            margin-bottom: 20px;
+        }
+
+        .form-box {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .input-group label {
+            font-size: 1em;
+            color: #112434;
+            margin-bottom: 5px;
+        }
+
+        .input-group input,
+        .input-group textarea,
+        .input-group select {
+            padding: 10px;
+            border: 1px solid #112434;
+            border-radius: 5px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .input-group input:focus,
+        .input-group textarea:focus,
+        .input-group select:focus {
+            outline: none;
+            border-color: #58b4e7;
+            box-shadow: 0 0 5px rgba(88, 180, 231, 0.5);
+        }
+
+        .register-button {
+            padding: 12px 20px;
+            background: #58b4e7;
+            color: #fff;
+            font-size: 1em;
+            font-weight: 600;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .register-button:hover {
+            background: #112434;
+        }
+
+        /* Footer Section */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+
+    </style>
+    <script>
+        // Form Validation (for Former Student Registration)
+function validateFormerStudentForm(form) {
+    let isValid = true;
+    const inputs = form.querySelectorAll('input, textarea');
+    
+    inputs.forEach(input => {
+        // Check if the required field is empty
+        if (input.required && !input.value.trim()) {
+            isValid = false;
+            input.classList.add('error');
+            input.nextElementSibling.textContent = `${input.previousElementSibling.textContent} is required.`;
+        } else {
+            input.classList.remove('error');
+            input.nextElementSibling.textContent = '';  // Clear the error message
+        }
+    });
+
+    return isValid;
+}
+
+// Event listener for form submission (Prevent default submission for validation)
+document.querySelector('form#former-student-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const form = this;
+
+    // Validate the form
+    if (validateFormerStudentForm(form)) {
+        // If valid, simulate form submission (you can replace this with actual submission logic)
+        alert("Form submitted successfully!");
+        // In real usage, you'd submit the form to the server here:
+        // form.submit();
+    }
+});
+
+// Smooth Scrolling for navigation links (same as on the main page)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Toggle Navigation Link Active State (highlighting "Former Student Registration" link)
+const navLinks = document.querySelectorAll('#header ul li a');
+navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+        navLinks.forEach(link => link.classList.remove('active'));
+        this.classList.add('active');
+    });
+});
+
+    </script>
+</body>
+
+</html>
